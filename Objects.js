@@ -5,10 +5,10 @@
 function invertDictionaryArray(dict) {
 	var result = {};
 
-	forEachObject(dict, function(key, values) {
+	forEachObject(dict, function (key, values) {
 		var i = 0;
-		
-		for (i = 0; i < values.length; i++) {
+
+		for (i = 0; i < values.length; i += 1) {
 			//Add the value to the mappingsByTag object if it doesn't already exist.
 			if (!result.hasOwnProperty(values[i])) {
 				result[values[i]] = [];
@@ -17,7 +17,6 @@ function invertDictionaryArray(dict) {
 			result[values[i]].push(key);
 		}
 	});
-	
 	//Return the MappingsByTag object.
 	return result;
 }
