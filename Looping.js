@@ -17,6 +17,7 @@ function forEachCollection(collection, fx) {
  * @param {Function} fx(key, value) called for each property of the object.
  */
 function forEachObject(object, fx) {
+	var key = null;
 	for (key in object) {
 		if (object.hasOwnProperty(key)) {
 			//Pass the key and the value of each  of the object's properties to this function.
